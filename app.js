@@ -37,6 +37,8 @@ app.get('/secret', (req, res) => {
 });
 
 // Auth routes
+
+// shows sign up form
 app.get('/register', (req, res) => {
     res.render('register');
 });
