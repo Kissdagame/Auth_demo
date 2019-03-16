@@ -80,12 +80,11 @@ app.get('/login', (req, res) => {
 
 // Login post route
 // login  logic
-// middleware  
+
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/secret',
     failureRedirect: '/login'
 }), (req, res) => {});
-
 
 // logout route
 
@@ -93,9 +92,6 @@ app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
 });
-
-
-
 
 // Starts the server
 app.listen(port, () => {
